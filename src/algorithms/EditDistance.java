@@ -9,13 +9,11 @@ public class EditDistance {
 
         int[][] dp = new int[m + 1][n + 1];
 
-        for (int i = 0; i <= m; i++) {
+        for (int i = 0; i <= m; i++)
             dp[i][0] = i;
-        }
 
-        for (int j = 0; j <= n; j++) {
+        for (int j = 0; j <= n; j++)
             dp[0][j] = j;
-        }
 
         for (int i = 1; i <= m; i++) {
 
@@ -27,19 +25,12 @@ public class EditDistance {
 
                 } else {
 
-                    dp[i][j] = 1 + Math.min(
+                    int insert = dp[i][j - 1];
+                    int delete = dp[i - 1][j];
+                    int replace = dp[i - 1][j - 1];
 
-                            dp[i - 1][j - 1],
-
-                            Math.min(
-
-                                    dp[i - 1][j],
-
-                                    dp[i][j - 1]
-
-                            )
-
-                    );
+                    dp[i][j] = 1 + Math.min(insert,
+                            Math.min(delete, replace));
 
                 }
 

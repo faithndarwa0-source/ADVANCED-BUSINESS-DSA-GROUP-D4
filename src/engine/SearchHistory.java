@@ -1,11 +1,10 @@
 package engine;
 
 import java.util.ArrayDeque;
-import java.util.Deque;
 
 public class SearchHistory {
 
-    private Deque<String> history;
+    private ArrayDeque<String> history;
 
     public SearchHistory() {
 
@@ -21,13 +20,17 @@ public class SearchHistory {
 
     public void showHistory() {
 
-        System.out.println("Recent Searches:");
-
         for (String word : history) {
 
             System.out.println(word);
 
         }
+
+    }
+
+    public String[] getHistory() {
+
+        return history.toArray(new String[0]);
 
     }
 

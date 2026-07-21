@@ -25,17 +25,26 @@ The Intelligent Search Engine is a Java desktop application developed as part of
 - ArrayDeque
 
 
-
-
-├── datastructures/
-
-├── engine/
-
-
-
-├── utils/
-
-└── Main.java
+## Project structure
+IntelligentSearchEngine
+│
+├── src
+│ ├── algorithms
+│ ├── benchmark
+│ ├── datastructures
+│ ├── engine
+│ ├── gui
+│ ├── utils
+│ ├── Main.java
+│ └── GuiLauncher.java
+│
+├── resources
+│ ├── dictionary.txt
+│ ├── test1000.txt
+│ ├── test10000.txt
+│ └── test1000000.txt
+│
+└── README.md
 
 
 ## Data Structures

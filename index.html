@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Intelligent Search - Smart Search Engine</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <div class="search-container">
+            <!-- Brand Header -->
+            <div class="brand-header">
+                <div class="logo-container">
+                    <div class="logo-icon">
+                        <i class="fas fa-brain"></i>
+                    </div>
+                    <div class="brand-text">
+                        <h1>Intelligent <span>Search</span></h1>
+                        <p class="tagline">Smart. Fast. Accurate.</p>
+                    </div>
+                </div>
+                <div class="status-badge">
+                    <span class="dot"></span>
+                    <span>Live</span>
+                </div>
+            </div>
+            
+            <!-- Search Box -->
+            <div class="search-box">
+                <div class="search-input-wrapper">
+                    <i class="fas fa-search search-icon"></i>
+                    <input type="text" 
+                           id="searchInput" 
+                           placeholder="Ask Intelligent Search anything..." 
+                           autocomplete="off">
+                    <button id="clearBtn" class="clear-btn">
+                        <i class="fas fa-times"></i>
+                    </button>
+                    <button id="voiceBtn" class="voice-btn" title="Voice Search">
+                        <i class="fas fa-microphone"></i>
+                    </button>
+                </div>
+                
+                <!-- Autocomplete Suggestions -->
+                <div id="autocompleteList" class="autocomplete-list"></div>
+                
+                <!-- Spell Check Suggestions -->
+                <div id="spellCheck" class="spell-check"></div>
+                
+                <!-- Quick Filters -->
+                <div class="quick-filters">
+                    <span class="filter-label">Quick:</span>
+                    <span class="filter-tag active" data-filter="all">All</span>
+                    <span class="filter-tag" data-filter="tech">Technology</span>
+                    <span class="filter-tag" data-filter="design">Design</span>
+                    <span class="filter-tag" data-filter="business">Business</span>
+                    <span class="filter-tag" data-filter="ai">AI</span>
+                </div>
+            </div>
+            
+            <!-- Search Stats -->
+            <div id="searchStats" class="search-stats">
+                <span id="resultCount">0</span> results found
+                <span id="searchTime"></span>
+            </div>
+            
+            <!-- Search Results -->
+            <div id="results" class="results">
+                <div class="welcome-message">
+                    <div class="welcome-icon">
+                        <i class="fas fa-robot"></i>
+                    </div>
+                    <h2>Welcome to Intelligent Search</h2>
+                    <p>Ask me anything, and I'll find the most relevant information for you.</p>
+                    <div class="example-queries">
+                        <span>Try: "JavaScript"</span>
+                        <span>"Data Science"</span>
+                        <span>"Web Development"</span>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Recent Searches -->
+            <div id="recentSearches" class="recent-searches">
+                <div class="recent-header">
+                    <h3><i class="fas fa-clock"></i> Recent Searches</h3>
+                    <button id="clearRecentBtn" class="clear-recent-btn">
+                        <i class="fas fa-trash-alt"></i> Clear All
+                    </button>
+                </div>
+                <div id="recentList"></div>
+            </div>
+            
+            <!-- Footer -->
+            <div class="search-footer">
+                <span>© 2026 Intelligent Search</span>
+                <span class="footer-divider">|</span>
+                <span>Powered by AI</span>
+                <span class="footer-divider">|</span>
+                <span><i class="fas fa-shield-alt"></i> Privacy Protected</span>
+            </div>
+        </div>
+    </div>
+    
+    <script src="data.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

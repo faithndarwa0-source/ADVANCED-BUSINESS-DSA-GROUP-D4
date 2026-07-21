@@ -26,6 +26,7 @@ The Intelligent Search Engine is a Java desktop application developed as part of
 
 
 ## Project structure
+```
 IntelligentSearchEngine
 │
 ├── src
@@ -45,7 +46,7 @@ IntelligentSearchEngine
 │ └── test1000000.txt
 │
 └── README.md
-
+```
 
 ## Data Structures
 * Trie (Primary Data Structure)
